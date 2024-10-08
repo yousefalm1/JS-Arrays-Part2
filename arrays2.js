@@ -51,7 +51,32 @@ addLailaToArray(instructors);
 const teams = ["Brazil", "Germany", "Italy"];
 function eliminateTeam(teams) {
   // Your code here
-  console.log(teams.pop());
+  return teams.pop();
 }
 
-eliminateTeam(teams);
+console.log(eliminateTeam(teams));
+
+// Challenge 1
+
+/**
+ * secondHalfOfArrayIfItIsEven(fruits):
+ * - receives array `fruits`
+ * - returns a new array that's the second half of the original array if it has an even number of elements
+ * - returns an empty array if it has an odd number of elements
+ *
+ * e.g.
+ * secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi"]) -> ["banana", "kiwi"]
+ * secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi", "blueberry"]) -> []
+ */
+
+const fruits = ["apple", "orange", "banana", "kiwi", "blueberry", "mango"];
+function secondHalfOfArrayIfItIsEven(fruits) {
+  // Your code here
+  if (fruits.length % 2 === 0) {
+    return fruits.slice(2);
+  } else {
+    return [];
+  }
+}
+
+console.log(secondHalfOfArrayIfItIsEven(fruits));
